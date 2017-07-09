@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/dialog.css">
+  <script src="lib/jquery-3.2.1.js"></script>
+  <script src="js/jquery.dialog.js"></script>
+</head>
+<body>
+  <button id="btn1">点击弹出对话框</button>
+  <!-- <div class="self-help-dialog">
+    <div class="content-wrapper">
+      <div class="title">我是标题</div>
+      <div class="content">我是内容部分</div>
+      <div class="btns">
+        <span>确定</span><span>取消</span>
+      </div>
+    </div>
+  </div> -->
+  <script>
+    $('#btn1').click(function(){
+      var dialog1 = new Dialog({
+        title: '数字不正确',
+        content: '请重新核对数字',
+        button: [
+          {type: 'confirm',text: '确认',function(){
+            alert(1);
+          }},
+          {type: 'cancel',text:'取消',function(){
+            alert('取消')
+          }}
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
